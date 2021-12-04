@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/AppRogerJara/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/AppRogerJara/app/src/main/res/layout/fragment_todos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/AppRogerJara/app/src/main/res/layout/item_photo.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/layout/activity_menu.xml" value="0.264" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/layout/app_bar_menu.xml" value="0.264" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/layout/content_menu.xml" value="0.264" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/layout/fragment_photos.xml" value="0.264" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/layout/fragment_todos.xml" value="0.264" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/layout/item_photo.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/layout/item_todo.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/layout/nav_header_menu.xml" value="0.264" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/menu/activity_main_drawer.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/rajg/OneDrive/Escritorio/moviles2/AppRogerJara/app/src/main/res/menu/menu.xml" value="0.22135416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
