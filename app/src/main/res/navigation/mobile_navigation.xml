@@ -8,13 +8,13 @@
     <fragment
         android:id="@+id/nav_todos"
         android:name="pe.idat.approgerjara.ui.todos.TodosFragment"
-        android:label="Todos impares"
+        android:label="Pacientes normales"
         tools:layout="@layout/fragment_todos" />
 
     <fragment
         android:id="@+id/nav_photos"
         android:name="pe.idat.approgerjara.ui.photos.PhotosFragment"
-        android:label="Photos pares"
+        android:label="Pacientes covid"
         tools:layout="@layout/fragment_photos" />
 
 </navigation>
