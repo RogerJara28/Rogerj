@@ -7,7 +7,9 @@ import retrofit2.converter.moshi.MoshiConverterFactory;
 
 public class RetrofitService {
 
-    private static final String BASE_URL = "https://jsonplaceholder.typicode.com/";
+    private static final String BASE_URL = "https://pokeapi.co/api/v2/";
+
+        //"https://jsonplaceholder.typicode.com/";//
 
     private static final Moshi moshi = new Moshi.Builder().build();
 

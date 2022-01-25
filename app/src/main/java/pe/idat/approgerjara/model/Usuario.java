@@ -1,24 +1,24 @@
 package pe.idat.approgerjara.model;
 
-public class Paciente {
-    private String codPaciente;
+public class Usuario {
+    private String codUsuario;
     private String contrasena;
     private String nombreApellido;
     private String celular;
 
-    public Paciente(String codPaciente, String contrasena, String nombreApellido, String celular) {
-        this.codPaciente = codPaciente;
+    public Usuario(String codUsuario, String contrasena, String nombreApellido, String celular) {
+        this.codUsuario = codUsuario;
         this.contrasena = contrasena;
         this.nombreApellido = nombreApellido;
         this.celular = celular;
     }
 
-    public String getCodPaciente() {
-        return codPaciente;
+    public String getCodUsuario() {
+        return codUsuario;
     }
 
-    public void setCodPaciente(String codPaciente) {
-        this.codPaciente = codPaciente;
+    public void setcodUsuario(String codUsuario) {
+        this.codUsuario = codUsuario;
     }
 
     public String getContrasena() {

@@ -2,16 +2,17 @@ package pe.idat.approgerjara.network;
 
 import java.util.List;
 
-import pe.idat.approgerjara.dto.Photo;
-import pe.idat.approgerjara.dto.Todo;
+import pe.idat.approgerjara.dto.Objeto1;
+import pe.idat.approgerjara.dto.Objeto1_1;
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 public interface JsonPlaceholderAPI {
 
-    @GET("todos")
-    Call<List<Todo>> obtenerTodos();
+    @GET("pokemon")
+    Call<Objeto1_1> obtenerTodos(@Query("limit") int limit);
 
     @GET("photos")
-    Call<List<Photo>> obtenerPhotos();
+    Call<List<Objeto1>> obtenerPhotos();
 }

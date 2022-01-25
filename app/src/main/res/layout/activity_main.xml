@@ -8,16 +8,17 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buscar_paciente_btn"
-        android:layout_width="251dp"
-        android:layout_height="128dp"
-        android:background="?android:attr/textSelectHandleRight"
-        android:text="Buscar"
+        android:id="@+id/buscar_usuario_btn"
+        android:layout_width="234dp"
+        android:layout_height="59dp"
+        android:background="?android:attr/fastScrollPreviewBackgroundRight"
+        android:text="INGRESAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        app:layout_constraintVertical_bias="0.173" />
+        app:layout_constraintVertical_bias="0.077" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/codigo_paciente_til"
@@ -34,10 +35,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
 
-            android:id="@+id/codigo_paciente_input"
+            android:id="@+id/codigo_usuario_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Codigo Paciente" />
+            android:hint="Codigo Entrenador" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -62,8 +63,8 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="376dp"
-        android:layout_height="257dp"
+        android:layout_width="338dp"
+        android:layout_height="220dp"
         android:layout_marginTop="27dp"
         app:cardCornerRadius="9dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,14 +74,14 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="338dp"
+            android:layout_height="223dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.482"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/doctor" />
+            app:srcCompat="@drawable/pokemon" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

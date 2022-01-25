@@ -14,13 +14,13 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import pe.idat.approgerjara.R;
-import pe.idat.approgerjara.dto.Photo;
+import pe.idat.approgerjara.dto.Objeto1;
 
-public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.PhotosViewHolder> {
+public class PokemonesAdapter extends RecyclerView.Adapter<PokemonesAdapter.PhotosViewHolder> {
 
-    private List<Photo> photos;
+    private List<Objeto1> photos;
 
-    public PhotosAdapter(List<Photo> photos) {
+    public PokemonesAdapter(List<Objeto1> photos) {
         this.photos = photos;
     }
 
@@ -33,11 +33,9 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.PhotosView
 
     @Override
     public void onBindViewHolder(@NonNull PhotosViewHolder holder, int position) {
-        Photo currentPhoto = photos.get(position);
-        holder.albumId.setText("Album Id: " + currentPhoto.getAlbumId());
-        holder.id.setText("Id: " + currentPhoto.getId());
-        holder.title.setText("Title: " + currentPhoto.getTitle());
-        Picasso.get().load(currentPhoto.getThumbnailUrl()).into(holder.thumbnail);
+        Objeto1 currentPhoto = photos.get(position);
+        holder.name.setText("name: " + currentPhoto.getName());
+        Picasso.get().load(currentPhoto.getUrl()).into(holder.url);
     }
 
     @Override
@@ -47,16 +45,13 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.PhotosView
 
     static class PhotosViewHolder extends RecyclerView.ViewHolder {
 
-        TextView albumId, id, title;
-        ImageView thumbnail;
+        TextView name;
+        ImageView url;
 
         public PhotosViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            albumId = itemView.findViewById(R.id.photo_album_id);
-            id = itemView.findViewById(R.id.photo_id);
-            title = itemView.findViewById(R.id.photo_title);
-            thumbnail = itemView.findViewById(R.id.photo_thumbnail);
+
         }
     }
 }

@@ -8,13 +8,16 @@
     <fragment
         android:id="@+id/nav_todos"
         android:name="pe.idat.approgerjara.ui.todos.TodosFragment"
-        android:label="Pacientes normales"
+        android:label="Pokemones normales"
         tools:layout="@layout/fragment_todos" />
 
     <fragment
         android:id="@+id/nav_photos"
-        android:name="pe.idat.approgerjara.ui.photos.PhotosFragment"
-        android:label="Pacientes covid"
+        android:name="pe.idat.approgerjara.ui.photos.PokemonesFragment"
+        android:label="Pokemones shiny"
         tools:layout="@layout/fragment_photos" />
+
+
+
 
 </navigation>

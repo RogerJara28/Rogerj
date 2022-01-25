@@ -3,8 +3,10 @@ package pe.idat.approgerjara;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -13,14 +15,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import pe.idat.approgerjara.model.Paciente;
+import pe.idat.approgerjara.model.Usuario;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<Paciente> pacientes;
-    private Button buscarPaciente;
-    private TextInputEditText codigoPaciente;
-    private TextInputEditText contrasenaPaciente;
+    private List<Usuario> usuarios;
+    private Button buscarUsuario;
+    private TextInputEditText codigoUsuario;
+    private TextInputEditText contrasenaUsuario;
+
+    private static final int REQUEST_PERMISSION_CAMERA = 100;
+    private static final int TAKE_PICTURE = 101;
+
+    private static final int REQUEST_PERMISSION_WRITE_STORAGE = 200;
+
+    Button btnTakePicture, btnSaveImage;
+    ImageView imageView;
+    Bitmap bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,33 +40,35 @@ public class MainActivity extends AppCompatActivity {
 
         inicializarViews();
 
-        crearPacientes();
+        crearUsuarios();
 
-        buscarPaciente.setOnClickListener((v) -> checkarCredenciales());
+        buscarUsuario.setOnClickListener((v) -> checkarCredenciales());
+
+
     }
 
     private void inicializarViews() {
-        buscarPaciente = findViewById(R.id.buscar_paciente_btn);
-        codigoPaciente = findViewById(R.id.codigo_paciente_input);
-        contrasenaPaciente = findViewById(R.id.contrasena_input);
+        buscarUsuario = findViewById(R.id.buscar_usuario_btn);
+        codigoUsuario = findViewById(R.id.codigo_usuario_input);
+        contrasenaUsuario = findViewById(R.id.contrasena_input);
     }
 
-    private void crearPacientes() {
-        pacientes = new ArrayList<>();
-        pacientes.add(new Paciente(
-                "p001",
+    private void crearUsuarios() {
+        usuarios = new ArrayList<>();
+        usuarios.add(new Usuario(
+                "u001",
                 "0202",
                 "Roger Jara",
                 "459786325"
         ));
-        pacientes.add(new Paciente(
-                "p002",
+        usuarios.add(new Usuario(
+                "u002",
                 "0505",
                 "jefferson Jara",
                 "459786327"
         ));
-        pacientes.add(new Paciente(
-                "p003",
+        usuarios.add(new Usuario(
+                "u003",
                 "0707",
                 "Cristian Lopez",
                 "451236984"
@@ -63,15 +76,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkarCredenciales() {
-        String codigo = Objects.requireNonNull(codigoPaciente.getText()).toString();
-        String contrasena = Objects.requireNonNull(contrasenaPaciente.getText()).toString();
+        String codigo = Objects.requireNonNull(codigoUsuario.getText()).toString();
+        String contrasena = Objects.requireNonNull(contrasenaUsuario.getText()).toString();
 
-        for (Paciente paciente : pacientes) {
-            if (codigo.equals(paciente.getCodPaciente()) && contrasena.equals(paciente.getContrasena())) {
+        for (Usuario usuario : usuarios) {
+            if (codigo.equals(usuario.getCodUsuario()) && contrasena.equals(usuario.getContrasena())) {
                 startActivity(new Intent(this, MenuActivity.class));
                 return;
             }
-            Toast.makeText(this, "Codigo del Paciente o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Codigo del usuario o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
         }
+
+
     }
-}
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+

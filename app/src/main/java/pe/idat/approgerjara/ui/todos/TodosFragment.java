@@ -15,7 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pe.idat.approgerjara.databinding.FragmentTodosBinding;
-import pe.idat.approgerjara.dto.Todo;
+import pe.idat.approgerjara.dto.Objeto1;
+import pe.idat.approgerjara.dto.Objeto1_1;
 import pe.idat.approgerjara.network.RetrofitService;
 import retrofit2.Response;
 
@@ -23,7 +24,9 @@ public class TodosFragment extends Fragment {
 
     private FragmentTodosBinding binding;
     private RecyclerView todosRv;
-    private List<Todo> todosImpares;
+    private List<Objeto1_1> todosImpares;
+    private List<Objeto1> photo;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class TodosFragment extends Fragment {
         todosRv.setLayoutManager(new LinearLayoutManager(getContext()));
 
         todosImpares = new ArrayList<>();
+        photo  = new ArrayList<>();
+
 
         solicitarTodos();
 
@@ -44,16 +49,13 @@ public class TodosFragment extends Fragment {
     private void solicitarTodos() {
         new Thread(() -> {
             try {
-                Response<List<Todo>> response = RetrofitService.api.obtenerTodos().execute();
+                Response<Objeto1_1> response = RetrofitService.api.obtenerTodos(-1).execute();
 
 
                 if (response.isSuccessful()) {
-                    List<Todo> allTodos = response.body();
-                    for (Todo todo : allTodos) {
-                        if (todo.getUserId() % 2 != 0) {
-                            todosImpares.add(todo);
-                        }
-                    }
+                    Objeto1_1 allTodos = response.body();
+                    photo = allTodos.getResults();
+
                     getActivity().runOnUiThread(this::cargarAdaptador);
                 }
             } catch (IOException e) {
@@ -63,7 +65,7 @@ public class TodosFragment extends Fragment {
     }
 
     private void cargarAdaptador() {
-        TodosAdapter adapter = new TodosAdapter(todosImpares);
+        TodosAdapter adapter = new TodosAdapter(photo,false);
         todosRv.setAdapter(adapter);
     }
 
@@ -72,4 +74,9 @@ public class TodosFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+
+
+
+
 }
