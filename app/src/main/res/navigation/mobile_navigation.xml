@@ -16,8 +16,10 @@
         android:name="pe.idat.approgerjara.ui.photos.PokemonesFragment"
         android:label="Pokemones shiny"
         tools:layout="@layout/fragment_photos" />
-
-
+    <fragment
+        android:id="@+id/mainTomarFoto"
+        android:name="pe.idat.approgerjara.MainTomarFoto"
+        android:label="MainTomarFoto" />
 
 
 </navigation>
